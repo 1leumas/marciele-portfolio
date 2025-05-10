@@ -1,0 +1,99 @@
+      
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Marciele Rodrigues Camara</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="portfolio-folder">
+        <div class="folder-header">
+            <h1>Marciele Rodrigues Camara</h1>
+        </div>
+
+        <!-- estrela canto da tela -->
+        <div class="star">*</div> 
+
+        <div class="tabs-container">
+            <button class="tab-button active" onclick="openTab(event, 'profile')">SOBRE MIM</button>
+            <button class="tab-button" onclick="openTab(event, 'social-media')">PROJETOS</button>
+            <button class="tab-button" onclick="openTab(event, 'contact')">CONTATO</button>
+        </div>
+
+        <div class="tab-content-area">
+            <!-- sobre mim -->
+            <div id="profile" class="tab-content active">
+                <div class="profile-grid">
+                    <div class="id-card">
+                        <h3>ID NUM #0001</h3>
+                        <div class="photo-placeholder">placeholder</div>
+                        <p><strong>NOME:</strong> Marciele Rodrigues Camara</p>
+                        <p><strong>IDADE:</strong> 99</p>
+                        <p><strong>OCUPACAO:</strong> Estudante de Publicidade e Propaganda</p>
+                    </div>
+
+                    <div class="briefing">
+                        <h3>// BIO //</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+
+                <div class="software-skills" style="margin-top: 25px;">
+                    <h3>// SKILLS //</h3>
+                    <ul>
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Criação de Campanhas Publicitárias</li>
+                        <li>Planejamento Estratégico de Marketing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- projetos -->
+            <div id="social-media" class="tab-content">
+                <div class="project-content">
+                    <h3>// MEUS PROJETOS //</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <div class="project-grid">
+                        <div class="project-item">
+                            <img src="https://images.squarespace-cdn.com/content/v1/54bdcba5e4b08f92b173441f/1492980835245-25LYZE96GXGM0194UELQ/designhexagon" alt="">
+                            <h4>Titulo</h4>
+                            <p>Descricao</p>
+                        </div>
+                        <div class="project-item">
+                            <img src="https://images.squarespace-cdn.com/content/v1/54bdcba5e4b08f92b173441f/1492980835245-25LYZE96GXGM0194UELQ/designhexagon" alt="">
+                            <h4>Titulo</h4>
+                            <p>Descricao</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- contato -->
+            <div id="contact" class="tab-content">
+                <div class="contact-info">
+                    <h3>// FALA COMIGO! //</h3>
+                    <p>Gostou do que viu? Entre em contato comigo!</p>
+                    <p>
+                        <i class="fab fa-whatsapp contact-icon"></i>-
+                        <a href="https://wa.me/5555996612877" target="_blank">(55) 99661-2877</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope contact-icon"></i> -
+                        <a href="mailto:marcirodrigues.0310@gmail.com">marcirodrigues.0310@gmail.com</a>
+                    </p>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

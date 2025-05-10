@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&family=Press+Start+2P&display=swap");
+
+:root {
+  --color-red: #ff003c;
+  --color-purple: #6a0dad;
+  --color-pink: #ff007f;
+  --color-yellow: #ffff00;
+  --color-text: #ffffff;
+  --color-bg-light: #2e2e2e;
+  --font-title: "Bebas Neue", cursive;
+  --font-body: "Montserrat", sans-serif;
+  --font-pixel: "Press Start 2P", cursive;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-light);
+  color: var(--color-text);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-image: radial-gradient(
+      circle,
+      var(--color-red) 1px,
+      transparent 1px
+    ),
+    radial-gradient(circle, var(--color-purple) 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.portfolio-folder {
+  width: 90%;
+  max-width: 900px;
+  border: 3px solid var(--color-pink);
+  border-radius: 15px;
+  box-shadow: 0 0 20px var(--color-purple), 0 0 30px var(--color-red) inset;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.folder-header {
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 2px dashed var(--color-yellow);
+  padding-bottom: 15px;
+}
+
+.folder-header h1 {
+  font-family: var(--font-title);
+  font-size: 3.5em;
+  color: var(--color-yellow);
+  text-shadow: 2px 2px 0 var(--color-red), -2px -2px 0 var(--color-purple);
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.tabs-container {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--color-red);
+  padding-bottom: 10px;
+}
+
+.tab-button {
+  font-family: var(--font-title);
+  font-size: 1.5em;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: var(--color-purple);
+  color: var(--color-text);
+  border: 2px solid var(--color-pink);
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 0 var(--color-red);
+}
+
+.tab-button:hover {
+  background-color: var(--color-pink);
+  color: var(--color-yellow);
+  transform: translateY(-3px);
+}
+
+.tab-button.active {
+  background-color: var(--color-red);
+  color: var(--color-yellow);
+  border-color: var(--color-yellow);
+  position: relative;
+  z-index: 1;
+}
+
+.tab-content-area {
+  background-color: rgba(50, 50, 50, 0.7);
+  padding: 25px;
+  border: 2px dashed var(--color-purple);
+  border-radius: 0 0 10px 10px;
+  min-height: 400px;
+}
+
+.tab-content {
+  display: none; /* esconde todas as abas */
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* profile */
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.id-card {
+  background-color: var(--color-pink);
+  color: var(--color-bg-light);
+  padding: 20px;
+  border: 3px solid var(--color-yellow);
+  border-radius: 10px;
+  transform: rotate(-2deg); /* girar um pouco o card */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* simular fita */
+.id-card::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(5deg);
+  width: 80px;
+  height: 25px;
+  background-color: rgba(255, 255, 0, 0.5);
+  border-left: 1px dashed #aaa;
+  border-right: 1px dashed #aaa;
+}
+
+.id-card h3 {
+  font-family: var(--font-title);
+  color: var(--color-yellow);
+  text-align: center;
+  margin-top: 0;
+  font-size: 1.8em;
+  border-bottom: 2px dashed var(--color-bg-light);
+  padding-bottom: 5px;
+}
+
+.id-card .photo-placeholder {
+  width: 100px;
+  height: 120px;
+  background-color: #ccc;
+  border: 2px solid var(--color-bg-light);
+  margin: 0 auto 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  color: #555;
+  text-align: center;
+}
+
+.id-card p {
+  margin: 8px 0;
+  font-size: 0.9em;
+}
+.id-card strong {
+  color: var(--color-yellow);
+}
+
+.briefing,
+.software-skills {
+  background-color: rgba(106, 13, 173, 0.3); /* roxo com alpha */
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px dashed var(--color-red);
+}
+.briefing h3,
+.software-skills h3 {
+  font-family: var(--font-title);
+  color: var(--color-pink);
+  margin-top: 0;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+.software-skills ul {
+  list-style: none;
+  padding: 0;
+}
+.software-skills li {
+  background-color: var(--color-red);
+  color: var(--color-yellow);
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  font-family: var(--font-pixel);
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+}
+.software-skills li::before {
+  content: ">";
+  margin-right: 10px;
+  font-family: var(--font-pixel);
+}
+
+/* --- contato --- */
+.contact-info {
+  text-align: center;
+}
+.contact-info h3 {
+  font-family: var(--font-title);
+  font-size: 2.5em;
+  color: var(--color-yellow);
+  text-shadow: 1px 1px 0 var(--color-red);
+}
+.contact-info p {
+  font-size: 1.2em;
+  margin: 15px 0;
+}
+.contact-info a {
+  color: var(--color-pink);
+  text-decoration: none;
+  font-weight: bold;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+  color: var(--color-yellow);
+}
+.contact-icon {
+  font-size: 1.5em;
+  margin-right: 10px;
+  color: var(--color-red);
+  width: 25px;
+  text-align: center;
+}
+
+/* --- projetos --- */
+.project-content h3 {
+  font-family: var(--font-title);
+  color: var(--color-pink);
+  font-size: 2em;
+  text-align: center;
+}
+.project-content p {
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: 20px;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.project-item {
+  background-color: var(--color-purple);
+  border: 2px solid var(--color-red);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+.project-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.project-item h4 {
+  font-size: 1.2rem;
+  font-family: var(--font-title);
+  color: var(--color-yellow);
+  margin-top: 0;
+}
+
+/* estrela no canto */
+.star {
+  position: absolute;
+  font-family: var(--font-pixel);
+  z-index: -1;
+  color: var(--color-yellow);
+  font-size: 3em;
+  top: 10px;
+  right: 10px;
+  transform: rotate(15deg);
+}
