@@ -10,13 +10,19 @@
 </head>
 <body>
 
+    <!-- imagem expandida -->
+    <div id="image-modal" class="image-modal">
+        <span class="close-modal" onclick="closeImg()">&times;</span>
+        <img class="modal-content" id="expanded-img" alt="Expanded Image">
+    </div>
+
     <div class="portfolio-folder">
         <div class="folder-header">
             <h1>Marciele Rodrigues Camara</h1>
         </div>
 
         <!-- estrela canto da tela -->
-        <div class="star">*</div> 
+        <!-- <div class="star">*</div>  -->
 
         <div class="tabs-container">
             <button class="tab-button active" onclick="openTab(event, 'profile')">SOBRE MIM</button>
@@ -30,15 +36,21 @@
                 <div class="profile-grid">
                     <div class="id-card">
                         <h3>ID NUM #0001</h3>
-                        <div class="photo-placeholder">placeholder</div>
-                        <p><strong>NOME:</strong> Marciele Rodrigues Camara</p>
-                        <p><strong>IDADE:</strong> 99</p>
-                        <p><strong>OCUPACAO:</strong> Estudante de Publicidade e Propaganda</p>
+                        <div class="content">
+                            <div class="photo-placeholder">
+                                <img src="./img/20250510_211523.jpg" alt="foto de marciele">
+                            </div>
+                            <div class="personal-info">
+                                <p><strong>NOME:</strong> Marciele Rodrigues Camara</p>
+                                <p><strong>IDADE:</strong> 20</p>
+                                <p><strong>OCUPAÇÃO:</strong> Estudante de Publicidade e Propaganda</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="briefing">
                         <h3>// BIO //</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Prazer! Sou a Marciele, e desde sempre todo tipo de arte e expressão me encanta. Adoro a a parte da criação tenho experiência como Social Media na execução de artes gráficas e campanhas, no atendimento ao cliente e planejamento estratégico.</p>
                     </div>
                 </div>
 
@@ -57,20 +69,21 @@
             <div id="social-media" class="tab-content">
                 <div class="project-content">
                     <h3>// MEUS PROJETOS //</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit <br>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
                     <div class="project-grid">
                         <div class="project-item">
-                            <img src="https://images.squarespace-cdn.com/content/v1/54bdcba5e4b08f92b173441f/1492980835245-25LYZE96GXGM0194UELQ/designhexagon" alt="">
-                            <h4>Titulo</h4>
-                            <p>Descricao</p>
+                            <img src="./img/projeto portfolio.png" alt="Projeto Vittal Home Care" onclick="openImg(event, './img/projeto portfolio.png')">
+                            <h4>Vittal Home Care</h4>
+                            <p>Criação de artes gráficas para redes sociais, com foco em conteúdos informativos voltados ao segmento de saúde domiciliar.</p>
                         </div>
                         <div class="project-item">
-                            <img src="https://images.squarespace-cdn.com/content/v1/54bdcba5e4b08f92b173441f/1492980835245-25LYZE96GXGM0194UELQ/designhexagon" alt="">
-                            <h4>Titulo</h4>
-                            <p>Descricao</p>
+                            <img src="./img/projeto portfolio 2.png" alt="Projeto Dapper Calçados" onclick="openImg(event, './img/projeto portfolio 2.png')">
+                            <h4>Dapper Calçados</h4>
+                            <p>Desenvolvimento de identidade visual para campanha nas redes sociais, incluindo protótipo de estampa para camiseta, alinhada ao estilo e posicionamento da marca nas redes sociais.</p>
+                        </div>
+                        <div class="project-item">
+                            <img src="./img/projeto portfolio 3.png" alt="Projeto Keller Imóvel" onclick="openImg(event, './img/projeto portfolio 3.png')">
+                            <h4>Keller Imóvel Legal</h4>
+                            <p>Criação de identidade visual e artes para redes sociais no setor imobiliário para padronizar a comunicação visual nas plataformas digitais.</p>
                         </div>
                     </div>
                 </div>
@@ -86,7 +99,7 @@
                         <a href="https://wa.me/5555996612877" target="_blank">(55) 99661-2877</a>
                     </p>
                     <p>
-                        <i class="fas fa-envelope contact-icon"></i> -
+                        <i class="fas fa-envelope contact-icon"></i>-
                         <a href="mailto:marcirodrigues.0310@gmail.com">marcirodrigues.0310@gmail.com</a>
                     </p>
                     <br>

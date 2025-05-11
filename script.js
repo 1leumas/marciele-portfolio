@@ -14,3 +14,16 @@ function openTab(event, tabName) {
   document.getElementById(tabName).classList.add("active");
   event.currentTarget.classList.add("active");
 }
+
+function openImg(event, imgSrc) {
+  const modal = document.getElementById("image-modal");
+  const modalImg = document.getElementById("expanded-img");
+
+  modal.style.display = "flex"; // <-- change to flex
+  modalImg.src = imgSrc;
+}
+
+function closeImg() {
+  const modal = document.getElementById("image-modal");
+  modal.style.display = "none";
+}
